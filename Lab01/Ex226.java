@@ -6,7 +6,7 @@ public class Ex226 {
         double a = coefficient.nextDouble();
         double b = coefficient.nextDouble();
 
-        if(a!=0){
+        if(a != 0){
             System.out.printf("x= %.2f", -b/a);
         }
         else {
@@ -22,16 +22,16 @@ public class Ex226 {
 
     static void LinearSystem(){
         Scanner coefficient= new Scanner(System.in);
-        double a11= coefficient.nextDouble();
-        double a12= coefficient.nextDouble();
-        double b1= coefficient.nextDouble();
-        double a21= coefficient.nextDouble();
-        double a22= coefficient.nextDouble();
-        double b2= coefficient.nextDouble();
+        double a11 = coefficient.nextDouble();
+        double a12 = coefficient.nextDouble();
+        double b1 = coefficient.nextDouble();
+        double a21 = coefficient.nextDouble();
+        double a22 = coefficient.nextDouble();
+        double b2 = coefficient.nextDouble();
 
-        double D= a11*a22- a12*a21;
-        double D1= b1*a22 - a12*b2;
-        double D2= a11*b2- a21*b1;
+        double D = a11*a22- a12*a21;
+        double D1 = b1*a22 - a12*b2;
+        double D2 = a11*b2- a21*b1;
         
         if(D!=0){
             System.out.printf("x1= %.2f", D1 / D);
@@ -54,13 +54,13 @@ public class Ex226 {
         double b = coefficient.nextDouble();
         double c = coefficient.nextDouble();
         
-        double delta= b*b - 4*a*c;
-        if(a!=0){
-            if(delta>0){
+        double delta = b*b - 4*a*c;
+        if(a != 0){
+            if(delta > 0){
                 System.out.printf("x1= %.2f x2=%.2f", (-b+Math.sqrt(delta))/(2*a), (-b-Math.sqrt(delta))/(2*a));
             }
             else {
-                if(delta==0){
+                if(delta == 0){
                     System.out.printf("x= %.2f", -b/(2*a));
                 }
                 else{
@@ -69,11 +69,11 @@ public class Ex226 {
             }
         }
         else{
-            if(b!=0){
+            if(b != 0){
                 System.out.printf("x= %.2f", -c/b);
             }
             else {
-                if(c==0){
+                if(c == 0){
                     System.out.println("Infinite solutions");
                 }
                 else{
@@ -89,7 +89,7 @@ public class Ex226 {
         Scanner option = new Scanner(System.in);
         int opt = option.nextInt();
         System.out.println(opt);
-        if(opt==1){
+        if (opt==1){
             System.out.println("Enter values a= b=");
             FirstDegreeEqn();
         }
