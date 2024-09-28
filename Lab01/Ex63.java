@@ -1,8 +1,5 @@
 import java.util.Scanner;
-<<<<<<< Updated upstream:Lab01/Ex63.jav
 
-=======
->>>>>>> Stashed changes:Lab01/Ex63.java
 public class Ex63 {
     public static void main(String[] args) {
         Scanner stars = new Scanner(System.in);
