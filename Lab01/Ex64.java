@@ -54,8 +54,12 @@ public class Ex64 {
             System.out.print("Invalid month\nPlease enter again: ");
         }
 
-        if(month == 2) System.out.print((Leap(year) == true ? "29" : "28"));
-        else if((month <= 7 && month % 2 == 1) || (month >= 8 && month % 2 == 0)) System.out.print("31");
-        else System.out.print("30");
+        if(month == 2) {
+            System.out.print((Leap(year) == true ? "29" : "28"));
+        } else if((month <= 7 && month % 2 == 1) || (month >= 8 && month % 2 == 0)) {
+            System.out.print("31");
+        } else {
+        System.out.print("30");
+        }
     }
 }
