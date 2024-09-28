@@ -12,40 +12,35 @@ public class Ex6 {
 
         int[][] matrix1 = new int[row][column];
         int[][] matrix2 = new int[row][column];
-        int[][] sumMatrix = new int[row][column];
+        int[][] sum_Matrix = new int[row][column];
 
-        // Input for first matrix
-        System.out.println("Enter elements of first matrix:");
+        System.out.println("Input the Matrix1");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 matrix1[i][j] = scanner.nextInt();
             }
         }
 
-        // Input for second matrix
-        System.out.println("Enter elements of second matrix:");
+        System.out.println("Input the Matrix2");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 matrix2[i][j] = scanner.nextInt();
             }
         }
 
-        // Adding the matrices
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+                sum_Matrix[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
 
-        // Display the result
-        System.out.println("Sum of the matrices:");
+        System.out.println("Sum of two matrices is:");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                System.out.print(sumMatrix[i][j] + " ");
+                System.out.print(sum_Matrix[i][j] + "\t");
             }
             System.out.println();
         }
-
         scanner.close();
     }
 }
