@@ -3,12 +3,11 @@ import java.util.Scanner;
 public class Ex6 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner nums = new Scanner(System.in);
 
         System.out.println("Enter size of matrix:");
-        int size = scanner.nextInt();
-        int row = size;
-        int column = size;
+        int row = nums.nextInt();
+        int column = nums.nextInt();
 
         int[][] matrix1 = new int[row][column];
         int[][] matrix2 = new int[row][column];
@@ -17,14 +16,14 @@ public class Ex6 {
         System.out.println("Input the Matrix1");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                matrix1[i][j] = scanner.nextInt();
+                matrix1[i][j] = nums.nextInt();
             }
         }
 
         System.out.println("Input the Matrix2");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                matrix2[i][j] = scanner.nextInt();
+                matrix2[i][j] = nums.nextInt();
             }
         }
 
@@ -41,6 +40,6 @@ public class Ex6 {
             }
             System.out.println();
         }
-        scanner.close();
+        nums.close();
     }
 }
