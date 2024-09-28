@@ -8,19 +8,19 @@ public class Ex64 {
         return false;
     }
     public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
+        Scanner nums = new Scanner(System.in);
         int year, month;
 
         System.out.print("Enter the year: ");
         while(true) {
-            if(inp.hasNextInt()) {
-                year = inp.nextInt();
+            if(nums.hasNextInt()) {
+                year = nums.nextInt();
                 if(year >= 0) break;
                 System.out.print("Invalid year\nPlease enter again: ");
                 continue;
             }
             System.out.print("Invalid year\nPlease enter again: ");
-            inp.next();
+            nums.next();
         }
 
         String[] ValidMonth = {
@@ -39,9 +39,9 @@ public class Ex64 {
         };
         System.out.print("Enter the month: ");
         while(true) {
-            if(inp.hasNextInt()) month = inp.nextInt();
+            if(nums.hasNextInt()) month = nums.nextInt();
             else {
-                String strMonth = inp.next();
+                String strMonth = nums.next();
                 month = 0;
                 for(int i = 0; i < 36; i++) {
                     if(strMonth.equals(ValidMonth[i])) {
@@ -61,5 +61,6 @@ public class Ex64 {
         } else {
         System.out.print("30");
         }
+        nums.close();
     }
 }
