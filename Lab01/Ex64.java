@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Ex64 {
     private static boolean Leap(int year) {
         if(year % 4 == 0) {
@@ -9,19 +8,19 @@ public class Ex64 {
         return false;
     }
     public static void main(String[] args) {
-        Scanner nums = new Scanner(System.in);
+        Scanner inp = new Scanner(System.in);
         int year, month;
 
         System.out.print("Enter the year: ");
         while(true) {
-            if(nums.hasNextInt()) {
-                year = nums.nextInt();
+            if(inp.hasNextInt()) {
+                year = inp.nextInt();
                 if(year >= 0) break;
                 System.out.print("Invalid year\nPlease enter again: ");
                 continue;
             }
             System.out.print("Invalid year\nPlease enter again: ");
-            nums.next();
+            inp.next();
         }
 
         String[] ValidMonth = {
@@ -40,9 +39,9 @@ public class Ex64 {
         };
         System.out.print("Enter the month: ");
         while(true) {
-            if(nums.hasNextInt()) month = nums.nextInt();
+            if(inp.hasNextInt()) month = inp.nextInt();
             else {
-                String strMonth = nums.next();
+                String strMonth = inp.next();
                 month = 0;
                 for(int i = 0; i < 36; i++) {
                     if(strMonth.equals(ValidMonth[i])) {
@@ -55,13 +54,8 @@ public class Ex64 {
             System.out.print("Invalid month\nPlease enter again: ");
         }
 
-        if(month == 2) {
-            System.out.print((Leap(year) == true ? "29" : "28"));
-        } else if((month <= 7 && month % 2 == 1) || (month >= 8 && month % 2 == 0)) {
-            System.out.print("31");
-        } else {
-        System.out.print("30");}
-
-        nums.close();
+        if(month == 2) System.out.print((Leap(year) == true ? "29" : "28"));
+        else if((month <= 7 && month % 2 == 1) || (month >= 8 && month % 2 == 0)) System.out.print("31");
+        else System.out.print("30");
     }
 }
