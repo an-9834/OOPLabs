@@ -18,6 +18,7 @@ public class Ex65 {
         System.out.print(Arrays.toString(arr));
         System.out.println();
         System.out.printf("Sum= %.2f",sum);
+        System.out.println();
         System.out.printf(" Average= %.2f", sum/n);
         
         input.close();   
