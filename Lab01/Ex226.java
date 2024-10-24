@@ -8,12 +8,10 @@ public class Ex226 {
 
         if(a != 0){
             System.out.printf("x= %.2f", -b/a);
-        }
-        else {
+        } else {
             if(b==0){
                 System.out.println("Infinite solutions");
-            }
-            else{
+            } else{
                 System.out.println("No solution");
             }
         }
@@ -36,12 +34,10 @@ public class Ex226 {
         if(D!=0){
             System.out.printf("x1= %.2f", D1 / D);
             System.out.printf(" x2= %.2f", D2 / D);
-        }
-        else {
+        } else {
             if(D1 != 0 && D2 != 0){
                 System.out.println("No solution");
-            }
-            else{
+            } else{
                 System.out.println("Infinite solutions");
             }
         }
@@ -58,11 +54,11 @@ public class Ex226 {
         if(a != 0){
             if(delta > 0){
                 System.out.printf("x1= %.2f x2=%.2f", (-b+Math.sqrt(delta))/(2*a), (-b-Math.sqrt(delta))/(2*a));
-            }
+            } 
             else {
                 if(delta == 0){
                     System.out.printf("x= %.2f", -b/(2*a));
-                }
+                } 
                 else{
                     System.out.println("No solution");
                 }
@@ -71,7 +67,7 @@ public class Ex226 {
         else{
             if(b != 0){
                 System.out.printf("x= %.2f", -c/b);
-            }
+            } 
             else {
                 if(c == 0){
                     System.out.println("Infinite solutions");
@@ -92,12 +88,10 @@ public class Ex226 {
         if (opt==1){
             System.out.println("Enter values a= b=");
             FirstDegreeEqn();
-        }
-        else if(opt==2){
+        } else if(opt==2){
             System.out.println("Enter values a11= a12= b1= \na21= a22= b2=");
             LinearSystem();
-        }
-        else{
+        } else{
             System.out.println("Enter values a= b= c=");
             SecondDegreeEqn();
         }
