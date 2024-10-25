@@ -7,7 +7,8 @@ public class Ex63 {
         stars.close();
         for (int i = 1; i <= n; i++) {
             System.out.print(" ".repeat(n - i));
-            System.out.print("*".repeat(2 * n - 1));
+            System.out.print("*".repeat(2 * i - 1));
+            System.out.println();
         }
         System.exit(0);
     }
