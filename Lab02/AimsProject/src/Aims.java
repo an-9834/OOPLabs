@@ -25,6 +25,15 @@ public class Aims {
         System.out.println();
 
         anOrder.addDigitalVideoDisc(dvd3);
+        totalCost = anOrder.totalCost();
+        System.out.printf("Total Cost is: %.2f", totalCost);
+        System.out.println();
+
+        anOrder.removeDigitalVideoDisc(dvd1);
+        totalCost = anOrder.totalCost();
+        System.out.printf("Total Cost is: %.2f", totalCost);
+        System.out.println();
+
         System.out.println(Arrays.toString(anOrder.getItemsOrdered()));
     }
 }
