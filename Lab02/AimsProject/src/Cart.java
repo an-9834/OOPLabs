@@ -2,7 +2,7 @@ public class Cart {
 	public static final int  MAX_ORDERED = 20;
     private DigitalVideoDisc[] itemsOrdered= new DigitalVideoDisc[MAX_ORDERED];
     private int qtyOrdered = 0;
-    public float totalCost = 0;
+    public float totalCost = 0; 
 
     public void addDigitalVideoDisc(DigitalVideoDisc disc){
         if(qtyOrdered<MAX_ORDERED){
@@ -41,10 +41,11 @@ public class Cart {
     }
 
     public float totalCost(){
+        float totalcost = 0;
         for(int i=0; i<qtyOrdered;i++){
-            totalCost+= itemsOrdered[i].getCost();
+            totalcost+= itemsOrdered[i].getCost();
         }
-        return totalCost;
+        return totalcost;
     }
 
     public String[] getItemsOrdered() {
