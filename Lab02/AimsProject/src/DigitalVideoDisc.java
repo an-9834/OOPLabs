@@ -38,7 +38,7 @@ public class DigitalVideoDisc {
     	super();
         this.title = title;
         this.category = category;
-        this.director = director;
+        this.director = director; 
         this.cost = cost;
     }
 
