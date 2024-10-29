@@ -5,22 +5,43 @@ public class Cart {
     public float totalCost = 0; 
 
     public void addDigitalVideoDisc(DigitalVideoDisc disc){
-        if(qtyOrdered<MAX_ORDERED){
-            itemsOrdered[qtyOrdered]= disc;
-            System.out.printf("The disc: \"%s\" has been added. ", disc.getTitle());
-            System.out.println();
-            qtyOrdered+=1;
+
+        /*Check to add DVD:
+            1. If the disc is in the cart, print "The disc had been added before."
+            2. If not, check qtyOrdered:
+                + If qtyOrdered < 20, add to Cart, qtyOrdered += 1, print "The disc has been added."
+                + If qtyOrdered = 20, print "The cart is almost full, please remove some disc."
+         */
+        
+        boolean check = false;
+        for(int i = 0; i < qtyOrdered; i++){
+            if(itemsOrdered[i].equals(disc)){
+                check = true;
+                break;
+            }
+        }
+
+        if (check == false){
+            if(qtyOrdered < MAX_ORDERED){
+                itemsOrdered[qtyOrdered] = disc;
+                qtyOrdered += 1;
+                System.out.printf("The disc: \"%s\" has been added.", disc.getTitle());
+                System.out.println();
+            }
+            else{
+                System.out.println("The cart is almost full, please remove some disc.");
+            }
         }
         else{
-            System.out.println("The cart is almost full, please remove some disc.");
+            System.out.printf("The disc: \"%s\" had been added before.", disc.getTitle());
+            System.out.println();
         }
-           
     }
     
     public void removeDigitalVideoDisc(DigitalVideoDisc disc){
-        int check=0;
+        int check = 0;
 
-        for(int i=0; i < qtyOrdered; i++){
+        for(int i = 0; i < qtyOrdered; i++){
             if(itemsOrdered[i].equals(disc)){
                 System.out.printf("The disc: \"%s\" has been removed.", disc.getTitle());
                 System.out.println();
