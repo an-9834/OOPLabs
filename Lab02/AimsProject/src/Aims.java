@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Aims {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         Cart anOrder = new Cart();
         
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
@@ -19,6 +19,10 @@ public class Aims {
         System.out.printf("Total Cost is: %.2f", totalCost);
         System.out.println();
 
+        anOrder.addDigitalVideoDisc(dvd3);
+        totalCost = anOrder.totalCost();
+        System.out.printf("Total Cost is: %.2f", totalCost);
+        System.out.println();
 
         anOrder.addDigitalVideoDisc(dvd3);
         System.out.println(Arrays.toString(anOrder.getItemsOrdered()));
