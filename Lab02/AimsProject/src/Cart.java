@@ -63,15 +63,15 @@ public class Cart {
 
     public float totalCost(){
         float totalcost = 0;
-        for(int i=0; i<qtyOrdered;i++){
-            totalcost+= itemsOrdered[i].getCost();
+        for(int i = 0; i < qtyOrdered; i++){
+            totalcost += itemsOrdered[i].getCost();
         }
         return totalcost;
     }
 
     public String[] getItemsOrdered() {
 		String[] listOrdered = new String[qtyOrdered];
-		for (int i = 0; i< qtyOrdered; i++) {
+		for (int i = 0; i < qtyOrdered; i++) {
 			listOrdered[i] = itemsOrdered[i].getTitle();
 		}
 		return listOrdered;
