@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Cart {
 	public static final int  MAX_ORDERED = 20;
     private DigitalVideoDisc[] itemsOrdered= new DigitalVideoDisc[MAX_ORDERED];
@@ -71,9 +74,13 @@ public class Cart {
 
     public String[] getItemsOrdered() {
 		String[] listOrdered = new String[qtyOrdered];
-		for (int i = 0; i < qtyOrdered; i++) {
+
+		for (int i = 0; i< qtyOrdered; i++) {
 			listOrdered[i] = itemsOrdered[i].getTitle();
 		}
-		return listOrdered;
+
+        ArrayList<String> list = new ArrayList<String>(Arrays.asList(listOrdered));
+        list.sort(null);
+        return list.toArray(new String[0]);
 	}
 }
