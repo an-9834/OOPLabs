@@ -1,0 +1,13 @@
+1. Is JAVA a Pass by Value or a Pass by Reference programming language?  
+	=> Java is a Pass by Value language.
+
+2. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain? 
+	=>  When we call swap, Java actually creates 2 new copies of jungleDVD and cinderellaDVD on stack, they are pointer to the object (object are in heap segment). 
+	   The swap function only swap pointer to other object, not changing any data in object/heap segment so after the function ends, title of these two object still remain
+
+3. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed? 
+	=> When the function is called, a new reference dvd is created and point to jungleDVD. The change of the title in reference dvd with the method setTitle leads to the change of the object jungleDVD. 
+	   After that, we assigned the new object to dvd. However, jungleDVD is not affected since dvd is now pointing to the newly created object.
+
+4. Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
+	=> It should return a String.
